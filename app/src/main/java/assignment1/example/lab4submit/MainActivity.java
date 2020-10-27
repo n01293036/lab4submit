@@ -13,6 +13,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
     public Button but;
+    public Button but1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,12 +21,20 @@ public class MainActivity extends AppCompatActivity {
 
 
         but = (Button) findViewById(R.id.button);
-
+        but1 = (Button) findViewById(R.id.button1);
 
         but.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this,betactivity.class);
+                startActivity(intent);
+            }
+        });
+
+        but1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,Search.class);
                 startActivity(intent);
             }
         });
@@ -43,25 +52,23 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem menuitem) {
                 switch (menuitem.getItemId()){
                     case R.id.home:
-                        startActivity(new Intent(getApplicationContext()
-                                ,MainActivity.class));
-                        overridePendingTransition(0, 0);
+
                         return true;
                     case R.id.list:
                         startActivity(new Intent(getApplicationContext()
                                 ,betactivity.class));
                         overridePendingTransition(0, 0);
-                        return false;
+                        return true;
                     case R.id.favorite:
                         startActivity(new Intent(getApplicationContext()
                                 ,favorite.class));
                         overridePendingTransition(0, 0);
-                        return false;
+                        return true;
                     case R.id.search:
                         startActivity(new Intent(getApplicationContext()
                                 ,Search.class));
                         overridePendingTransition(0, 0);
-                        return false;
+                        return true;
                 }
                 return false;
             }
