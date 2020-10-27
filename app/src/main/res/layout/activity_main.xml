@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="506dp"
+        android:layout_marginLeft="115dp"
+        android:text="@string/textnmain"
+        android:textSize="40dp" />
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottomlab4"
+        android:layout_marginBottom="356dp"
+        android:layout_marginLeft="138dp"
+        android:text="@string/buttonmain" />
+
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottomlab4"
+        app:menu="@menu/menulab4"
+        android:background="@android:color/holo_purple"
+        app:itemIconTint="@drawable/selected"
+        app:itemTextColor="@drawable/selected"
+
+        android:layout_alignParentBottom="true"/>
+
+
+
+</RelativeLayout>
+

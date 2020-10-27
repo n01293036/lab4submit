@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">lab4submit</string>
+    <string name="buttonmain">Press here to bet</string>
+    <string name="textnmain">BET HOME</string>
+
+    <array name="betlist">
+        <item>England Win</item>
+        <item>Spain Win</item>
+
+    </array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
